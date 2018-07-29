@@ -1,0 +1,147 @@
+<div style="height: 100%">
+    <div class="col-sm-12 panel panel-default" lq-panel lq-panel-title="个人信息管理" style="min-height: 100%;">
+        <div class="col-sm-12">
+            <form class="form-horizontal" name="form1" ng-submit="doEmployee()">
+                <h4>基本信息</h4>
+                <hr />
+                <div class="col-sm-6">
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">职工编号：</label>
+                        <div class="col-sm-8">
+                            <label>{{thisUser.employee_code}}</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">所在部门：</label>
+                        <div class="col-sm-8">
+                            <label>{{thisUser.departmentName}}</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">联系电话：</label>
+                        <div class="col-sm-8">
+                            <label>{{thisUser.employee_phone}}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">职工姓名：</label>
+                        <div class="col-sm-8">
+                            <label>{{thisUser.employee_name}}</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">现任职位：</label>
+                        <div class="col-sm-8">
+                            <label>{{thisUser.positionName}}</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">入职日期：</label>
+                        <div class="col-sm-8">
+                            <label>{{thisUser.employee_indate | date: 'yyyy-MM-dd'}}</label>
+                        </div>
+                    </div>
+                </div>
+                <h4 style="margin-top: 20px">个人信息</h4>
+                <hr />
+                <div class="col-sm-4">
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">性别：</label>
+                        <div class="col-sm-8">
+                            <select class="form-control input-sm" ng-model="thisUser.sex">
+                                <option value="男" selected>男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">身份证号：</label>
+                        <div class="col-sm-8">
+                            <input type="text" maxlength="18" class="form-control input-sm" ng-model="thisUser.identity">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">毕业院校：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm" ng-model="thisUser.graduate">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">个人籍贯：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm" ng-model="thisUser.jiguan">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">年龄：</label>
+                        <div class="col-sm-8">
+                            <input type="number" step="1" min="0" class="form-control input-sm" ng-model="thisUser.age">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">婚姻状况：</label>
+                        <div class="col-sm-8">
+                            <select class="form-control input-sm" ng-model="thisUser.marry">
+                                <option value="已婚" >已婚</option>
+                                <option value="未婚" selected>未婚</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">出生日期：</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control input-sm" ng-model="thisUser.brothDate">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">宗教信仰：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm" ng-model="thisUser.faith">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">民族：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm" ng-model="thisUser.nation">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">政治面貌：</label>
+                        <div class="col-sm-8">
+                            <select class="form-control input-sm" ng-model="thisUser.politice">
+                                <option value="群众" >群众</option>
+                                <option value="党员">党员</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">QQ号码：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm" ng-model="thisUser.QQ">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-4 text-left">微信号码：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm" ng-model="thisUser.weChat">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary btn-sm pull-right" ng-click="subPersonal()">修改个人信息</button>
+                </div>
+                <h4 style="margin-top: 20px">薪资信息</h4>
+                <hr />
+                <h5>当前总工资：{{thisUser.finalMoney}}元/月</h5>
+            </form>
+        </div>
+    </div>
+</div><SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>

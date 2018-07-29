@@ -1,0 +1,144 @@
+<style>
+    a,
+    a:hover {
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    #header {
+        height: 105px;
+        color: #d9edf7;
+        background-color: rgba(28, 43, 54, 0.75);
+        /*position: absolute;*/
+        position: fixed;
+        z-index: 999;
+        /*margin-bottom: 30px;*/
+    }
+
+    .dropdown-menu {
+        background-color: rgba(66, 16, 72, 0.91);
+
+    }
+
+    .dropdown-menu > ul {
+        width: 80px;
+    }
+
+    .dropdown-menu > li:hover {
+        background-color: rgba(39, 72, 68, 0.91);
+    }
+
+    .dropdown-menu > li > a {
+        color: #d9edf7;
+    }
+
+    h1 > a {
+        color: #ffffff;
+    }
+
+    h1 > a:hover {
+        color: #ffffff;
+    }
+
+    h1 > a:hover span {
+        color: rgba(14, 91, 47, 0.98);
+    }
+
+    .personPart {
+        height: 100%;
+        padding-top: 28px;
+        padding-right: 0;
+    }
+</style>
+<div class="col-sm-12" id="header">
+    <div class="col-sm-12" style="padding-left: 0">
+        <div class="col-sm-3">
+            <h1 class="text-left" style="margin-left: 25px;margin-top: 35px"><a><span>LQ</span> 联趣</a></h1>
+        </div>
+        <div class="col-sm-9 personPart">
+            <div class="col-sm-9" style="margin-top:38px">
+                <span class="pull-right">
+                <a class="font" ui-sref="index"><i class="ion-home"></i> 主页</a>
+                <a class="font" ui-sref="department" ng-show="user.role && user.role === 'admin'"><i
+                        class="ion-folder"></i> 部门管理</a>
+                <a class="font" ui-sref="position" ng-show="user.role && user.role === 'admin'"><i
+                        class="ion-settings"></i> 职位管理</a>
+                <a class="font" ui-sref="employee" ng-show="user.role && user.role === 'admin'"><i
+                        class="ion-person-stalker"></i> 员工管理</a>
+                </span>
+            </div>
+            <label class="welcomeLabel">欢迎您，{{user.userName}}</label>
+            <div class="btn-group col-sm-3" style="padding-right: 0">
+                <div class="col-sm-7" style="margin-top:38px">
+                </div>
+                <div class="col-sm-5">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        <img src="../../img/touxiang.png" class="img-circle pull-right" width="65px" height="65x">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" id="export">
+                        <li class="text-center">
+                            <a ng-click="logOut()">
+                                退出登录
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a ng-click="changePwd()">
+                                修改密码
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a ui-sref="personal">
+                                个人中心
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/ng-template" id="changePwdModel.html">
+            <div class="modal-header noPadding">
+                <div style="margin-left: 3%;color:#fff">修改密码</div>
+            </div>
+            <form class="form-horizontal" name="form1" ng-submit="changePwdModal()">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="">
+                            <div class="form-group col-lg-12">
+                                <label class="col-sm-3 text-left">旧密码：</label>
+                                <div class="col-sm-8">
+                                    <input type="password" class="form-control input-sm" ng-model="user.oldPassword"
+                                           placeholder="请输入当前密码" maxlength="20">
+                                </div>
+                                <span style="color: red;padding-top: 15px;font-size: 18px;">*</span>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label class="col-sm-3 text-left">新密码：</label>
+                                <div class="col-sm-8">
+                                    <input type="password" class="form-control input-sm" ng-model="user.newPassword"
+                                           placeholder="请输入新密码" maxlength="20">
+                                </div>
+                                <span style="color: red;padding-top: 15px;font-size: 18px;">*</span>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label class="col-sm-3 text-left">确认新密码：</label>
+                                <div class="col-sm-8">
+                                    <input type="password" class="form-control input-sm" ng-model="user.newPassword2"
+                                           placeholder="请重新输入新密码" maxlength="20">
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div ng-show="showMessage" style="color: red;padding-top: 15px;font-size: 18px;">两次密码不一致</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" style="margin-right: 1%" ng-disabled="disSub">提交</button>
+                </div>
+            </form>
+        </script>
+    </div>
+</div><SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>

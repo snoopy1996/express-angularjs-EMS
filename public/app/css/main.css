@@ -1,0 +1,214 @@
+
+body{
+    /*background-color: #F0F3F4;*/
+    background-image: url("../img/bgImg.jpg");
+    background-size: 100% 100%;
+    color: #e2e5e8;
+}
+.al-content{
+    height: 100%;
+    padding-top: 120px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+}
+label{
+    color: #e2e5e8;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    color: rgba(179,186,192,0.98);
+}
+a:link{
+    text-decoration:none ;
+    color: rgba(179,186,192,0.98);
+}
+a:focus{
+    text-decoration:none ;
+    color: rgba(15,132,69,0.98);
+    /*background-color: rgba(15,132,69,0.98);;*/
+}
+a:hover {
+    text-decoration:none ;
+    color: rgba(15,132,69,0.98);
+}
+a:active{
+    text-decoration:none ;
+    color: rgba(15,132,69,0.98);
+}
+
+.font{
+    font-family: 黑体;
+    font-size: 18px;
+    padding: 5px 8px 5px 8px;
+}
+/*欢迎语位置*/
+.welcomeLabel{
+    position: absolute;
+    top: 70px;
+    right: 95px;
+}
+/*表格基本样式*/
+.table-bordered>thead>tr>th,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>tbody>tr>td,
+.table-bordered>tfoot>tr>td {
+    border: 1px solid gainsboro;
+    text-align: center;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: #cbcbcb;
+    border: 0px solid gainsboro;
+}
+
+.table-hover>tbody>tr>td:hover {
+    border: 0px solid gainsboro;
+}
+/*表格排序黑色三角*/
+.st-sort-ascent:before {
+    content: '\25B2';
+}
+/*表格分页样式*/
+.st-sort-descent:before {
+    content: '\25BC';
+}
+.pagination{
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.pagination>li>a,
+.pagination>li>span {
+    color: #ede8e8;
+    border-color: rgba(46, 64, 101, 0.68);
+    background-color: rgba(46, 64, 101, 0.68);
+}
+
+.pagination>li:first-of-type>a,
+.pagination>li:first-of-type>span {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.pagination>li:last-of-type>a,
+.pagination>li:last-of-type>span {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    background-color: #209e91;
+    border-color: #d6d6d6;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #666666;
+}
+
+.select-page {
+    width: 50px;
+    text-align: center;
+}
+
+.pagination li a input {
+    padding: 0;
+    margin: -5px 0;
+    background-color: rgba(58, 114, 114, 0.53);
+}
+
+.form-group label {
+    line-height: 34px;
+}
+/*表格基本样式*/
+.table {
+    margin-bottom: 0;
+}
+.table > thead > tr > th {
+    border-bottom: 1px solid;
+    white-space: nowrap;
+}
+.table > thead > tr > th >input{
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 20px;
+}
+.table > thead > tr > th:first-child {
+     text-align: center;
+ }
+.table > thead > tr > th:last-child {
+     padding-right: 16px;
+ }
+.table > tbody > tr> td {
+    padding: 0 8px;
+    line-height: 35px;
+    border-top: 1px solid;
+}
+.table > tbody > tr> td:first-child {
+     text-align: center;
+}
+.table > tbody > tr> td:last-child {
+     padding-right: 16px !important;
+}
+.table>tbody>tr:hover,
+.table>tbody>tr:hover td{
+    background-color: rgba(01,18,38,0.8);
+    border: rgba(01,18,38,0.8);
+}
+
+.noPadding{
+    padding: 0;
+}
+label{
+    line-height: 34px;
+    font-weight: normal;
+    padding-top: 0;
+}
+
+.form-control{
+    margin-top: 8px;
+}
+.panel,
+.panel-default>.panel-heading{
+    background-color: rgba(4,17,12,0.3);
+    color: rgba(237,237,237,0.97);
+}
+.btn-link{
+    color: #4cae4c;
+}
+.form-control{
+    background-color: rgba(4,17,12,0.2);
+    color: rgba(237,237,237,0.97);
+}
+.btn-link:hover{
+   color:#4cae4c;
+}
+input[type=checkbox]{
+    margin-top: 12px;
+}
+.form-control[disabled], fieldset[disabled] .form-control{
+    /*color: #2f3e50;*/
+    background-color: rgba(6, 12, 7, 0.75);
+}
+option{
+    background-color: rgb(14,39,52);
+}
+h4{
+    color: #bad1f1;
+}
+.form-control[readonly]{
+    background-color: rgba(6, 12, 7, 0.75);
+}
